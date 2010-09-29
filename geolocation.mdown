@@ -1,0 +1,26 @@
+geoloc
+------
+
+Unfortunately, we are the deadzone, so no net connection. This will of course make following along a bit difficult.
+
+* good mob apps are
+    * focused
+    * fast
+    * smart
+
+Achitecture options
+
+    * native v web
+    * if it can be done in js, css, html, then you prolly should
+    
+Geolocation obj has watchPosition instead of getPosition - this will act like interval and keep updating position
+
+
+Droid tools
+
+droidgap (from phonegap)
+
+
+Phonegap gets around crossdomain issue, since its using the file:// protocol
+
+

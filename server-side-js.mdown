@@ -1,0 +1,19 @@
+why SSJS
+--------
+
+* dont want to have to do things x2, and since we already are forced to use JS in the client, might as well on the server
+* progressive enhancement is free - even if js is off, server will create it
+
+* narwhal - most complete commonJS implementation
+* fab 
+* node
+    * have a look at github node page, to see all the modules available
+    
+Some node modules of interest:
+
+* Templating: Mustache
+* Paperboy - simple static server framework
+* Dom + YUI3  - render the widget HTML on server side
+* express (mvc)
+
+(monofur font)

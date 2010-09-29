@@ -1,0 +1,32 @@
+* App Cache
+    * 
+    
+    re: Manifest
+        * add a comment to to manifest ie: # version n.x
+
+    * can access cache via js
+        window.applicationCache.status
+        * can flush, hotswap
+    
+    Google - mobile bookmark bubble
+
+* Offline Storage
+    * localStorage
+    * sessionStorage
+    * websql - not supported ie, ff
+    * indexed DB
+    * file storage
+    
+can do multiple attrib now
+
+<input type="file" id="images" multiple>
+    
+using filereader, you can read the data off the user disk, instead of uploading
+
+* Use localstore to delay requiring to signup
+    * Lazy Registration
+
+multiurl.com/l/3g4
+
+slide deck
+http://prez.mahemoff.com/wd-offline/#slide1

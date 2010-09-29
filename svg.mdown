@@ -1,0 +1,20 @@
+SVG
+---
+
+* Can do svg via CSS to apply filters
+* see svg-wow.org
+* svg is just a dom app like html
+* svg, like html, can add any microdata/microformats
+* cool: use media queries to have it render graphics themselves differently with svg
+* crossbrowser - can use SVG Web JS Shim - flash based, or other libs, which convert SVG to VML when necessary
+
+svg             canvas
+doc based | script based
+vectors | pixel operations
+object model    | low level graphi API
+perf hit with large amount | fast rendering
+accessible | ...
+( see slides)
+
+SVG good for UI
+

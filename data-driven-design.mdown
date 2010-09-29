@@ -1,0 +1,40 @@
+Data-driven & 'genius' design
+-----------------------------
+
+Intuition
+---------
+
+* when you go into design process without any user research
+
+Heuristics
+----------
+
+* rules we obey in the process of design
+
+Data
+----
+
+Why data is important
+    
+    * HiPPOs - Highest Paid Person in Organization - use data to justify decisions
+    
+    * Quantitative Data described behaviour
+    * Qualititative data described intention
+
+People Centric analytics
+* KISSmetrics    
+* Performable
+
+Role of Data
+
+Split testing!!! is your new bff
+
+    * SplitTesting can help 
+    
+ST will let you test insane shit, since you can make sure it only appears to limited user base. so removes the risk out of testing new designs, ideas. 
+
+
+--
+
+Have to know science, as well as context. 
+

@@ -1,0 +1,70 @@
+OOCSS
+-----
+
+Why?
+
+* CSS blocks page render till download
+
+Interesting: Haste Based Trace Packaging 
+
+    * automated way of packaging CSS that FB tried.
+    * analyzes traffic patterns from logs, created CSS based on that data
+    * didn't work out so well - ended up with larger css 
+
+* look at the oocss grid system. Infinitely nestable, simple. fluid. (github.com/oocss?)
+    * how does this compare to new yui grids, which also has this feature.    
+
+Granularity fail
+
+    * we don't think about css in a granular fashion
+    * the basic idea is to think of css as legos - we want to create the building blocks
+
+Do a visual inventory!
+
+    * take your designs, and break them down. basically, pull out all the elements, eliminate dupes.
+    
+Stale Rules
+
+    * Rules no longer used
+    * rules used on subsequent pageviews or activated on user action
+
+(look into: dust-me selectors http://www.sitepoint.com/dustmeselectors/)
+
+Predictability & Consistency
+
+    * Avoid location dependant styles!!
+    * a 'HEADING' should not become a 'heading' in diff location
+    * instead of h1, h2, h3 try
+    
+        h1, .h1 { ... }
+        h2, .h2 { ... }
+    * set up these global values.
+    * this will allow allow you to respect semantics, while still allowing visual consistency. 
+    
+    How to test for unpredictable code? ie:
+    
+    #bar h1 {...}
+    #foo h1 {...}
+    
+    grep -in 'h[1-6]' style.css    
+    to analyze css
+    This will give you a list with line numbers of every heading.
+  
+You want to be consistent, otherwise you end up in a situation where you are writing overrides to your own css for different locations. This is also part of predicatable - all these heading have diff behaviour where they are used. So maybe they should be split out. which leads to...
+
+Specificity Wars
+
+    * Specificity screws up the cascade
+    * use hacks sparingly - and DON'T let them change your specificity
+    * avoid styling IDs.   
+        * not reuseable (id's are unique to page)
+        * are to strong - trump class rules
+        * avoid !important except on leaf nodes.
+    * style classes not elements!  
+    ie: not div.error - just .error
+    * give rules the same strength
+
+Duplication!
+    * grep is your friend
+    ie: grep -in 'font-size' style.css
+    ie:  grep -in 'float' style.css if you have a lot of float, maybe you should be using grids

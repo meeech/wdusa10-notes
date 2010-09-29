@@ -1,0 +1,44 @@
+UI Thread
+---------
+
+* js perf directly affects user xp
+* the ui thread
+    * no ui updates while js is executing  
+* Does JIT compiling help?
+    * not quite - on first run, you take the bite for compile time. 
+* 100ms cutoff - no js job should take more than 100ms to complete.
+
+Solutions/Techniques
+--------------------
+
+* timers - ie: use set timeout pattern to chunk up the work. 
+* webworkers
+    * data driven, async, no access to dom.
+    * better than timer method - executes faster, since not having to use delays
+    
+Repaint & Reflow
+----------------
+
+* repaint - visual change doesn't require recalculation of layout.
+    * ie: color change
+    
+* reflow - visual change requires layout change
+
+These get queued up as js executes and then exec'ed in order
+
+* Perform dom manipulations off the document. 
+    * remove element from document, modify it, insert back into doc
+    * set element to display: none, make changes, then set display back to default
+    * use docfrag
+
+* Group style changes together
+    * Make a css class, then just change class name on the element, as oppossed to applying individual styles. 
+    * Can use cssText property on the style object.
+    
+* Avoid Accidental reflow
+    * browser doesn't calculate reflows right away, however asking for calculated data (computed style) will force the reflow early.   
+    * Solution: minimize access to layout information, 
+    * If computed style is being requested more than once, cache
+    
+Slide deck
+http://www.slideshare.net/nzakas/high-performance-javascript-webdirections-usa-2010
