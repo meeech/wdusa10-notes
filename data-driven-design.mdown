@@ -16,12 +16,14 @@ Data
 
 Why data is important
     
-    * HiPPOs - Highest Paid Person in Organization - use data to justify decisions
-    
-    * Quantitative Data described behaviour
-    * Qualititative data described intention
+* HiPPOs - Highest Paid Person in Organization - use data to justify decisions to them
+
+
+Quantitative Data described behaviour  
+Qualititative data described intention
 
 People Centric analytics
+
 * KISSmetrics    
 * Performable
 
